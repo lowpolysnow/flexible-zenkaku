@@ -1,0 +1,81 @@
+{
+	"name": "flexible-zenkaku",
+	"displayName": "flexibleZenkaku",
+	"description": "Customizable Zentaku highlighter",
+	"version": "0.0.1",
+	"publisher": "lowpolysnow",
+	"engines": {
+		"vscode": "^1.37.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"*"
+	],
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/lowpolysnow/flexible-zenkaku"
+	},
+	"extensionKind": "ui",
+	"license": "Zlib",
+	"main": "./out/extension.js",
+	"contributes": {
+		"configuration": {
+			"title": "flexibleZenkaku",
+			"properties": {
+				"flexibleZenkaku.borderWidth": {
+					"type": "number",
+					"default": 1,
+					"description": "unit:px"
+				},
+				"flexibleZenkaku.borderRadius": {
+					"type": "number",
+					"default": 0,
+					"description": "unit:px"
+				},
+				"flexibleZenkaku.borderStyle": {
+					"type": "string",
+					"default": "solid"
+				},
+				"flexibleZenkaku.light_backgroundColor": {
+					"type": "string",
+					"default": "#00000000"
+				},
+				"flexibleZenkaku.light_borderColor": {
+					"type": "string",
+					"default": "#C8C8C820"
+				},
+				"flexibleZenkaku.dark_backgroundColor": {
+					"type": "string",
+					"default": "#00000000"
+				},
+				"flexibleZenkaku.dark_borderColor": {
+					"type": "string",
+					"default": "#C8C8C820"
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile"
+	},
+	"devDependencies": {
+		"@types/chai": "^4.2.3",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^5.2.6",
+		"@types/node": "^10.12.21",
+		"chai": "^4.2.0",
+		"decache": "^4.5.1",
+		"glob": "^7.1.6",
+		"istanbul": "^0.4.5",
+		"mocha": "^6.1.4",
+		"remap-istanbul": "^0.13.0",
+		"tslint": "^5.12.1",
+		"typescript": "^3.3.1",
+		"vscode": "^1.1.34"
+	}
+}
