@@ -9,6 +9,7 @@
 .vscode-test/**
 coverage
 coverconfig.json
+doc
 image
 node-modules
 out/**/*.map
